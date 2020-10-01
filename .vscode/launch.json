@@ -8,7 +8,7 @@
             "name": "CMake For Cplusplus",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/MyCMakeProject.exe",
+            "program": "${workspaceFolder}/build/CppCMakeProject.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

@@ -1,16 +1,22 @@
 #include <iostream>
-#include "swap/swap.h"
+#include "TestCppBasic.h"
 
-int main()
+void TestCppBasicSwap()
 {
     int a = 10, b = 20;
 
-    std::cout << "Before swap" << std::endl;
-    std::cout << "a=" << a << " ,b=" << b << std::endl;
+    std::cout << "Before Swap" << std::endl;
+    std::cout << "a = " << a << ", b = " << b << std::endl;
 
-    swap(a, b);
+    basic::TestCppBasic cppBasic;
+    cppBasic.Swap(a, b);
 
-    std::cout << "After swap" << std::endl;
-    std::cout << "a=" << a << " ,b=" << b << std::endl;
+    std::cout << "After Swap" << std::endl;
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+}
+
+int main()
+{
+    TestCppBasicSwap();
     return 0;
 }
