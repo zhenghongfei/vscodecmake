@@ -1,22 +1,12 @@
-#include <iostream>
 #include "TestCppBasic.h"
 
-void TestCppBasicSwap()
-{
-    int a = 10, b = 20;
-
-    std::cout << "Before Swap" << std::endl;
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-
-    basic::TestCppBasic cppBasic;
-    cppBasic.Swap(a, b);
-
-    std::cout << "After Swap" << std::endl;
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-}
+using namespace basic;
 
 int main()
 {
-    TestCppBasicSwap();
+    TestCppBasic *cppBasic = new TestCppBasic();
+    cppBasic->TestSwap();
+    cppBasic->TestVariableInit();
+    delete cppBasic;
     return 0;
 }
