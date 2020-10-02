@@ -72,4 +72,13 @@ namespace basic
         int arr4[] = {};
         int arr5[] = {0};
     }
+
+    void TestCppBasic::PrintVariableInit()
+    {
+        cout << "Variable int a:" << a << endl;
+        cout << "Variable int b:" << b << endl;
+        cout << "Variable const static int c:" << c << endl;
+        cout << "Variable static constexpr double d:" << d << endl;
+        cout << "Variable const int e:" << e << endl;
+    }
 } // namespace basic

@@ -1,4 +1,13 @@
 namespace std11
 {
-    void Print();
-}
+    class TestNoExpect
+    {
+    public:
+        void TestNoExpectForThrow();
+
+    private:
+        void Throw();
+        void NotBlockThrow();
+        void BlockThrow() noexcept;
+    };
+} // namespace std11
