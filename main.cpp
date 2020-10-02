@@ -1,9 +1,10 @@
 #include "TestCppBasic.h"
 #include "TestOperationOverload.h"
 #include "Complex.h"
+#include "TestStd11.h"
 #include <iostream>
 
-int main()
+void TestCppBasicProject()
 {
     using namespace basic;
 
@@ -18,6 +19,17 @@ int main()
 
     Complex complex;
     complex.Print();
+}
 
+void TestCppStd11Project()
+{
+    using namespace std11;
+    Print();
+}
+
+int main()
+{
+    TestCppBasicProject();
+    TestCppStd11Project();
     return 0;
 }
