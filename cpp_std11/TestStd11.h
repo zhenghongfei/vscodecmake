@@ -10,4 +10,17 @@ namespace std11
         void NotBlockThrow();
         void BlockThrow() noexcept;
     };
+
+    class TestAuto
+    {
+    public:
+        void TestAutoUsed();
+
+    private:
+        template <typename T, typename U>
+        void Mutiply1(T &t, U &u);
+
+        template <typename T, typename U>
+        auto Mutiply2(T &t, U &u);
+    };
 } // namespace std11

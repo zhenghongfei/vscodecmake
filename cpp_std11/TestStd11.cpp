@@ -44,11 +44,38 @@ namespace std11
 
         try
         {
-            testNoExpect.BlockThrow();
+            // 打开后程序退出，后续用例无法执行
+            // testNoExpect.BlockThrow();
         }
         catch (...)
         {
             cout << "Found throw 1." << endl;
         }
+    }
+
+    // TestAuto.class
+
+    template <typename T, typename U>
+    void TestAuto::Mutiply1(T &t, U &u)
+    {
+        auto result = t * u;
+        cout << "TestAuto::Mutiply1:" << result << endl;
+    }
+
+    template <class T, class U>
+    auto TestAuto::Mutiply2(T &t, U &u)
+    {
+        return t * u;
+    }
+
+    void TestAuto::TestAutoUsed()
+    {
+        int a = 10;
+        int b = 5;
+        Mutiply1(a, b);
+
+        double c = 10.5;
+        double d = 5.5;
+        cout << "TestAuto::Mutiply2:" << Mutiply2(c, d) << endl;
     }
 } // namespace std11
