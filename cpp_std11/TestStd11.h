@@ -23,4 +23,10 @@ namespace std11
         template <typename T, typename U>
         auto Mutiply2(T &t, U &u);
     };
+
+    class TestThread
+    {
+    public:
+        void TestThreadRun();
+    };
 } // namespace std11

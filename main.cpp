@@ -55,6 +55,12 @@ void TestCppStd11Project()
 
     cout << "Test TestAuto End.." << endl;
 
+    TestThread *testThread = new TestThread();
+    testThread->TestThreadRun();
+    delete testThread;
+
+    cout << "Test TestThread End.." << endl;
+
     cout << "Test Cpp C++11 Project End.." << endl;
 }
 

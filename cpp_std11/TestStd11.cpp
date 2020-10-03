@@ -1,7 +1,10 @@
 #include "TestStd11.h"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 namespace std11
 {
@@ -77,5 +80,22 @@ namespace std11
         double c = 10.5;
         double d = 5.5;
         cout << "TestAuto::Mutiply2:" << Mutiply2(c, d) << endl;
+    }
+
+    void hello(const char *name)
+    {
+        // sleep 500毫秒
+        std::this_thread::sleep_for(milliseconds(500));
+
+        std::cout << "Hello " << name << std::endl;
+
+        // sleep 到指定时间点
+        std::this_thread::sleep_until(system_clock::now() + milliseconds(500));
+    }
+
+    void TestThread::TestThreadRun()
+    {
+        std::thread thread(hello, "C++11 Thread Test");
+        thread.join();
     }
 } // namespace std11
